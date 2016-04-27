@@ -1,9 +1,14 @@
-$(function () {
-    $.post('/officials', {
-        data: {
-            address: '16300 lake ridge dr maple grove mn 55311'
-        }
-    }).done(function (res) {
-        console.log(res);
-    });
+$('#jobnumber').focusout(function(){
+      var jobnumber=$('#jobnumber').val()
+      $.ajax({
+            url: '/',
+            data: $('form').serialize(),
+            type: 'POST',
+            // success: function(response) {
+            //     //I need to some how be able to populate my table with the returned list called jobs;
+            // },
+            // error: function(error) {
+            //     alert(error);
+            // }
+        });
 });
