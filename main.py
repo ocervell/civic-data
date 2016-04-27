@@ -13,8 +13,10 @@ response = requests.get(r)
 elections_data = json.loads(response.content)
 pp.pprint(elections_data)
 
-
 election_ids = [a['id'] for a in elections_data['elections']]
 pp.pprint(election_ids)
 
 # Loop through election ids and get voter data for one address
+for a in election_ids:
+    pass
+
